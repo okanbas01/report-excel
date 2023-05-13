@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Veri Listeleme ve Detay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              id="veriInput"
+              class="form-control"
+              placeholder="Tarih Girin"
+            />
+            <button class="btn btn-primary" onclick="getir()">Getir</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <table id="veriTablosu" class="table">
+            <thead>
+              <tr>
+                <th scope="col">Dağıtım ID</th>
+                <th scope="col">Veriler</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <div id="detayPanel" class="detay-panel">
+            <h3 id="detayBaslik"></h3>
+            <div id="detayIcerik"></div>
+            <button
+              id="detayKapat"
+              style="display: none"
+              class="btn btn-danger"
+              onclick="detayiKapat()"
+            >
+              Detayı Kapat
+            </button>
+            <button
+              id="excelBtn"
+              style="display: none"
+              class="btn btn-primary"
+              onclick="veriyiExcelMailAt()"
+            >
+              Veriyi Excel'e Dönüştür ve Mail At
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="loadingIcon" class="loading-icon"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
